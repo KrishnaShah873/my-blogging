@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Blog App',
-      theme: AppTheme.darkThemeMode,
+      // theme: AppTheme.darkThemeMode,
       // home: const LoginPage(),\
       home: LoginPage(),
     );

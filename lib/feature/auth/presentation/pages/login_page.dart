@@ -1,4 +1,5 @@
 import 'package:blog_app/core/theme/app_pallete.dart';
+import 'package:blog_app/feature/auth/presentation/pages/home_screen.dart';
 import 'package:blog_app/feature/auth/presentation/widge/auth_gradient_button.dart';
 import 'package:flutter/material.dart';
 import 'package:blog_app/feature/auth/presentation/widge/auth_field.dart';
@@ -34,60 +35,31 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Sign In.',
+                'Sign In',
                 style: TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 20),
-
               AuthField(
                 hintName: "Enter name",
               ),
               SizedBox(height: 12),
-
               AuthField(
                 hintName: 'Enter email',
               ),
               SizedBox(height: 12),
-
               AuthField(
                 hintName: 'Enter password',
               ),
-              SizedBox(height: 12)
-              // const AuthField(
-              //   hintText: 'Email',
-              //   controller:emailController,),
-              // AuthField(),
-              // const SizedBox(height: 15),
-              // const AuthField(
-              //   hintText: 'Passoword',
-              //   controller:passwordController,),
-              //   isObscureText:true,
-              // const SizedBox(height: 20),
-              // const AuthGradientButton(
-              //   buttonText:'Sign In',
-              // ),
-              // const SizedBox(height: 20),
-              // GestureDetector(
-              //   onTap:(){
-              //     Navigation.push(context,SignUpPage.route());
-              //   }
-              // )
-              // RichText(
-              //     text: TextSpan(text: 'Don\'t have an account? '),
-              //     style: Theme.of(context).textTheme.titleMedium,
-
-              //     children: [
-              //       TextSpan(
-              //         text: 'Sign Up',
-              //         style: Theme.of(context).textTheme.titleMedium?.copyWith(
-              //               color: AppPallete.gradient2,
-              //               fontWeight: FontWeight.bold,
-              //             ),
-              //       ),
-              //     ])
+              SizedBox(height: 12),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  },
+                  child: Text("Login"))
             ],
           )),
     ));
